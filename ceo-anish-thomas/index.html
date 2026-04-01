@@ -6,109 +6,144 @@
   <title>CEO Profile - Anish Thomas</title>
 
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #ffffff;
-      color: #111827;
-    }
+ body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f9fafb; /* subtle background */
+  color: #111827;
+}
 
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 40px 20px;
-    }
+/* Container */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 60px 20px;
+}
 
-    .grid {
-      display: grid;
-      gap: 40px;
-    }
+/* Sections spacing */
+section {
+  margin-bottom: 60px;
+}
 
-    .two-col {
-      grid-template-columns: 1fr;
-    }
+/* Typography */
+h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
 
-    @media (min-width: 768px) {
-      .two-col {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
+h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
 
-    h1 {
-      font-size: 42px;
-      margin: 10px 0;
-    }
+h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
 
-    h2 {
-      font-size: 28px;
-    }
+p {
+  line-height: 1.7;
+  color: #4b5563;
+  margin-bottom: 15px;
+}
 
-    h3 {
-      font-size: 22px;
-    }
+/* Grid */
+.grid {
+  display: grid;
+  gap: 40px;
+}
 
-    p {
-      line-height: 1.6;
-      color: #4b5563;
-    }
+.two-col {
+  grid-template-columns: 1fr;
+}
 
-    .btn {
-      display: inline-block;
-      padding: 12px 20px;
-      background: black;
-      color: white;
-      border-radius: 12px;
-      text-decoration: none;
-      margin-top: 10px;
-    }
+@media (min-width: 768px) {
+  .two-col {
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+}
 
-    .card {
-      border-radius: 16px;
-      padding: 25px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      background: #fff;
-    }
+/* Cards (Fix sticking issue) */
+.card {
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+  border: 1px solid #f1f1f1;
+}
 
-    .hero img {
-      width: 100%;
-      border-radius: 16px;
-    }
+/* Hero Image */
+.hero img {
+  width: 100%;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
 
-    .highlights {
-      display: grid;
-      gap: 20px;
-    }
+/* Button */
+.btn {
+  display: inline-block;
+  padding: 14px 22px;
+  background: #111827;
+  color: white;
+  border-radius: 12px;
+  text-decoration: none;
+  margin-top: 10px;
+  transition: 0.3s;
+}
 
-    @media (min-width: 768px) {
-      .highlights {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
+.btn:hover {
+  background: #374151;
+}
 
-    .highlight-box {
-      border: 1px solid #e5e7eb;
-      padding: 20px;
-      border-radius: 16px;
-      transition: 0.3s;
-    }
+/* Highlights Grid */
+.highlights {
+  display: grid;
+  gap: 25px;
+}
 
-    .highlight-box:hover {
-      transform: scale(1.03);
-      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-    }
+@media (min-width: 768px) {
+  .highlights {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 
-    .quote {
-      background: #111827;
-      color: white;
-      text-align: center;
-      padding: 50px;
-      border-radius: 16px;
-    }
+/* Highlight Cards */
+.highlight-box {
+  background: white;
+  border: 1px solid #e5e7eb;
+  padding: 25px;
+  border-radius: 18px;
+  transition: all 0.3s ease;
+}
 
-    .center {
-      text-align: center;
-    }
+.highlight-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
 
+/* Quote Section */
+.quote {
+  background: #111827;
+  color: white;
+  padding: 60px 40px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.quote p {
+  font-size: 22px;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* Center Section */
+.center {
+  text-align: center;
+  max-width: 600px;
+  margin: auto;
+}
   </style>
 </head>
 
