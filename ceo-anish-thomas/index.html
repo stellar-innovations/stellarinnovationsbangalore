@@ -1,0 +1,117 @@
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+
+export default function CEOPage() {
+  return (
+    <div className="min-h-screen bg-white text-gray-900">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 py-12 space-y-16">
+
+        {/* Hero Section */}
+        <section className="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <p className="text-sm uppercase tracking-widest text-gray-500 mb-2">
+              Leadership
+            </p>
+            <h1 className="text-5xl font-bold mb-4">Anish Thomas</h1>
+            <p className="text-xl text-gray-600 mb-6">Chief Executive Officer, Stellar Innovations</p>
+            <p className="text-gray-700 leading-relaxed mb-6">
+              Anish Thomas leads Stellar Innovations with a strong focus on technology-driven transformation 
+              in the U.S. mortgage, title, and financial services ecosystem. With over two decades of industry 
+              experience, he has built scalable, automation-led solutions that improve operational efficiency, 
+              accuracy, and compliance.
+            </p>
+            <Button size="lg" className="rounded-2xl">View Company Profile</Button>
+          </div>
+
+          <div className="rounded-2xl overflow-hidden shadow-xl">
+            <img
+              src="https://images.unsplash.com/photo-1603415526960-f7e0328c63b1"
+              alt="Anish Thomas CEO"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </section>
+
+        {/* About Section */}
+        <section>
+          <Card className="shadow-md rounded-2xl">
+            <CardContent className="p-8 space-y-4">
+              <h2 className="text-3xl font-semibold">Professional Overview</h2>
+              <p className="text-gray-700 leading-relaxed">
+                As the CEO of Stellar Innovations, Anish Thomas has been instrumental in shaping the company’s 
+                strategic direction toward intelligent automation and digital transformation. His leadership 
+                integrates deep domain expertise with advanced technologies such as AI, machine learning, and 
+                workflow automation.
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                He focuses on building systems that reduce manual dependency, enhance data accuracy, and enable 
+                financial institutions to scale operations efficiently across mortgage, title, and appraisal 
+                workflows.
+              </p>
+            </CardContent>
+          </Card>
+        </section>
+
+        {/* Vision Section */}
+        <section>
+          <Card className="shadow-md rounded-2xl">
+            <CardContent className="p-8 space-y-4">
+              <h2 className="text-3xl font-semibold">Leadership Philosophy</h2>
+              <p className="text-gray-700 leading-relaxed">
+                Anish Thomas believes that the future of financial services lies in combining human expertise 
+                with intelligent automation. His approach emphasizes building technology that enhances decision 
+                making rather than replacing it.
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                Under his guidance, Stellar Innovations continues to develop scalable, compliant, and efficient 
+                workflow solutions that meet the evolving demands of modern financial institutions.
+              </p>
+            </CardContent>
+          </Card>
+        </section>
+
+        {/* Key Highlights */}
+        <section className="grid md:grid-cols-3 gap-6">
+          {[
+            { title: "20+ Years Experience", desc: "Extensive expertise in financial services and operations" },
+            { title: "Technology Leadership", desc: "Driving AI and automation-led transformation" },
+            { title: "Global Operations", desc: "Building scalable and efficient delivery models" }
+          ].map((item, i) => (
+            <motion.div
+              key={i}
+              whileHover={{ scale: 1.03 }}
+              className="border p-6 rounded-2xl hover:shadow-lg transition"
+            >
+              <h3 className="font-semibold text-lg mb-2">{item.title}</h3>
+              <p className="text-gray-600 text-sm">{item.desc}</p>
+            </motion.div>
+          ))}
+        </section>
+
+        {/* Quote Section */}
+        <section>
+          <Card className="bg-gray-900 text-white rounded-2xl">
+            <CardContent className="p-10 text-center">
+              <p className="text-2xl italic max-w-3xl mx-auto">
+                "Sustainable growth in financial services is achieved by combining domain expertise with 
+                intelligent automation and structured processes."
+              </p>
+            </CardContent>
+          </Card>
+        </section>
+
+        {/* CTA Section */}
+        <section className="text-center space-y-4">
+          <h3 className="text-3xl font-semibold">Explore Stellar Innovations</h3>
+          <p className="text-gray-600 max-w-xl mx-auto">
+            Discover how Stellar Innovations is transforming financial workflows through technology, 
+            automation, and domain expertise.
+          </p>
+          <Button size="lg" className="rounded-2xl">Explore Services</Button>
+        </section>
+
+      </div>
+    </div>
+  );
+}
